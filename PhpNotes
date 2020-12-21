@@ -1,0 +1,45 @@
+PHP is a programming language
+used to make scalable and easily maintainable website or application
+this can be accomplished with PHP
+
+PHP intergrates really well with HTML we can write 
+the HTML code with PHP right beside it and they work together perfectly
+
+PHP is considered a server-side language it talks to the client
+and it sits on the web server 
+
+Starting Up PHP
+first thing we need to do when we want to start working 
+with php is that we need to create something called a PHP server
+when we want to run PHP we have to run it on a web server
+
+this is because php is a server side language that sits on the server 
+we can use php on the web server to interact with the website
+php will handle giving files to users, getting information from users
+moral of the story php runs on the server
+
+in terminal we are going to want to want to start a webserver using php 
+the command for this is 
+
+```
+php -S localhost:4000
+```
+
+this is going to create a webserver for us
+next we are going to have to make a folder where we want to store all PHP files
+then we are going to make a file with a hello world 
+
+(Refer to HelloWorld)
+
+next to see the code we have written we need to go to
+the address bar and place the local host we defined in the terminal 
+next in the address bar we are going to want to write out the path to the file we want to 
+access 
+
+so for the beginning example we need to type:
+localhost:4000/HelloWorld/site.php while the php server is running
+
+Writing HTML
+for this part of the tutorial we are going to use the echo command in php 
+to write html inside of the php code
+so back in HelloWorld/site.php
