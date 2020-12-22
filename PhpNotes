@@ -52,3 +52,7 @@ we call the function first then we pass the string
 strtoupper($string) 
 
 functions in PHP are specific operations that we can call 
+
+to make a array we do this:
+array(element1, element2);
+we call an arraylike a function
