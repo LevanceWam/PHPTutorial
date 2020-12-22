@@ -56,3 +56,6 @@ functions in PHP are specific operations that we can call
 to make a array we do this:
 array(element1, element2);
 we call an arraylike a function
+
+can not Print an whole array like 
+echo $arrayName we have to do some stuff to it 
