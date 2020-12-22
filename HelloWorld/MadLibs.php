@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MadLib game</title>
 </head>
 <body>
 <!-- going to build a Mad lib game using PHP -->
