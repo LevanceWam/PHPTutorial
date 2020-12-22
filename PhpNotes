@@ -43,3 +43,12 @@ Writing HTML
 for this part of the tutorial we are going to use the echo command in php 
 to write html inside of the php code
 so back in HelloWorld/site.php
+
+IMPORTANT:
+In php so far we do not have the concept of methods
+we have functions instead so instead of calling:
+string.toUpper()
+we call the function first then we pass the string 
+strtoupper($string) 
+
+functions in PHP are specific operations that we can call 
