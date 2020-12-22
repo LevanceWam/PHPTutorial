@@ -59,3 +59,11 @@ we call an arraylike a function
 
 can not Print an whole array like 
 echo $arrayName we have to do some stuff to it 
+
+IMPORTANT CREATING FUNCTIONS:
+
+When we create a function inside of PHP it is similar to how we call a function in 
+javascript, But there is a difference when we go to set the parameters
+
+we have to prefix the function parameters with a $ inorder for the application not to yell at us 
+
