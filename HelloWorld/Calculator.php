@@ -17,7 +17,8 @@
 
     Your value is: <?php 
     // storing the values from the form into the varible and eching the sum
-    // we didnt need the variables we can add the gets but it is good practice
+    // we didn't need the variables we can add the gets but it is good practice
+    // note that we can access the num1 and num2 variables in the url and change the numbers
         $valueOne = $_GET['Num1'];
         $valueTwo = $_GET['Num2'];
         echo $valueOne + $valueTwo;
