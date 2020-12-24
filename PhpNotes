@@ -82,3 +82,4 @@ to store a value inside of the property we follow this syntax:
     $book->pages = '402';
 
 We do not use dot notation in php so we have to be careful with everything that we do
+Also when we want to use the keyword this we have to prefix it with $
