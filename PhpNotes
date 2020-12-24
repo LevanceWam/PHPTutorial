@@ -47,6 +47,8 @@ for this part of the tutorial we are going to use the echo command in php
 to write html inside of the php code
 so back in HelloWorld/site.php
 
+--------------------------------------------------------------------------------------------------------
+
 IMPORTANT:
 In php so far we do not have the concept of methods
 we have functions instead so instead of calling:
@@ -63,6 +65,8 @@ we call an arraylike a function
 can not Print an whole array like 
 echo $arrayName we have to do some stuff to it 
 
+--------------------------------------------------------------------------------------------------------
+
 IMPORTANT CREATING FUNCTIONS:
 
 When we create a function inside of PHP it is similar to how we call a function in 
@@ -70,6 +74,7 @@ javascript, But there is a difference when we go to set the parameters
 
 we have to prefix the function parameters with a $ inorder for the application not to yell at us 
 
+--------------------------------------------------------------------------------------------------------
 IMPORTANT CLASSES AND OBJECTS:
 class follow the same syntax as classes for javascript,typescript with a few expection
 to declare a property we use var this by default is public 
@@ -91,18 +96,34 @@ Example
             $this->gpa = $gpa;
         }
 
+--------------------------------------------------------------------------------------------------------
 
 IMPORTANT DATA TYPES:
-String
-Integer
-Float (floating point numbers - also called double)
-Boolean
-Array
-Object
-NULL
-Resource
+String: A string is a sequence of characters, like "Hello world!".
 
-Booleans can not be returned and render in the html like we do for JS 
+Integer: An integer data type is a non-decimal number between -2,147,483,648 and 2,147,483,647.
+
+Float (floating point numbers - also called double)
+
+Boolean: A Boolean represents two possible states: TRUE or FALSE.
+
+Array: An array stores multiple values in one single variable.
+
+Object: Classes and objects are the two main aspects of object-oriented programming.
+A class is a template for objects, and an object is an instance of a class.
+When the individual objects are created,
+they inherit all the properties and behaviors from the class, 
+but each object will have different values for the properties.
+
+NULL: a special data type which can have only one value: NULL.
+A variable of data type NULL is a variable that has no value assigned to it.
+If a variable is created without a value, it is automatically assigned a value of NULL.
+
+Resource: The special resource type is not an actual data type. It is the storing of a reference to functions and resources external to PHP.
+A common example of using the resource data type is a database call.
+
+SIDE NOTE:
+Booleans can not be returned and render in the html
 Example:
 return ($this->gpa > 3) ? "true" : "false";
 
