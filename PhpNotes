@@ -83,3 +83,30 @@ to store a value inside of the property we follow this syntax:
 
 We do not use dot notation in php so we have to be careful with everything that we do
 Also when we want to use the keyword this we have to prefix it with $
+Example
+ // notice that the field suffixing the this keyword does not need $
+            // this is because this is going to make it a seperate variable and we do not want that
+            $this->name = $name;
+            $this->major = $major;
+            $this->gpa = $gpa;
+        }
+
+
+IMPORTANT DATA TYPES:
+String
+Integer
+Float (floating point numbers - also called double)
+Boolean
+Array
+Object
+NULL
+Resource
+
+Booleans can not be returned and render in the html like we do for JS 
+Example:
+return ($this->gpa > 3) ? "true" : "false";
+
+notice that we are returning a string and not the Booleans
+for some reason PHP doesn't render the booleans 
+we can still return them in the code for other functions or expression 
+but not for rendering

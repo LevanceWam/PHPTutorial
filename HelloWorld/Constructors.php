@@ -26,15 +26,15 @@
         {
             // the keyword this refers to the current object
             // when we use the keyword this we have to prefix it with a $ 
-            $this->$title = $title;
-            $this->$author = $author;
-            $this->$pages = $pages;
+            // notice that when we use this that the variable after it does not need the $
+            $this->title = $title;
+            $this->author = $author;
+            $this->pages = $pages;
         }
     }
 
     // this is a object
     // this is a instance of a class
-    $book = new Book("raisin in the sun", "Not sure");
 
     echo $book->author;
     ?>
