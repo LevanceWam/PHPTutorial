@@ -1,3 +1,6 @@
+https://www.w3schools.com/php/default.asp
+Please also look at the tutorial that is offered on w3schools for deeper understanding 
+
 PHP is a programming language
 used to make scalable and easily maintainable website or application
 this can be accomplished with PHP
@@ -67,3 +70,15 @@ javascript, But there is a difference when we go to set the parameters
 
 we have to prefix the function parameters with a $ inorder for the application not to yell at us 
 
+IMPORTANT CLASSES AND OBJECTS:
+class follow the same syntax as classes for javascript,typescript with a few expection
+to declare a property we use var this by default is public 
+we can also use private and protected prefixes to define a property in a class
+
+to store a value inside of the property we follow this syntax:
+ $book = new Book;
+    $book->title = "raisin in the sun";
+    $book->author = 'Not sure';
+    $book->pages = '402';
+
+We do not use dot notation in php so we have to be careful with everything that we do

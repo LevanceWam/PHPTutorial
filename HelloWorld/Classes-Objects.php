@@ -27,7 +27,7 @@
         // to define a attribute we use var
         var $title;
         var $author;
-        var $pages;
+        private $pages;
     }
 
     // this is a object
