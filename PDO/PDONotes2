@@ -1,0 +1,62 @@
+# PDO Course part 2
+
+So for this part of the course I am solely focusing on 
+the PDO objectand writing down what it does and 
+how i need to use it.
+
+In the live coding exercise we used SQLite and we didn't need to 
+create variables for the host and etc like we aare seeing now so we will
+go and learn about pdo and sqlite at a letter time 
+for now lets focus on learning PDO
+
+## PDO
+First we are going to want to create a 
+PDO instance here we call the 'new PDO()' function
+to create a new instance of PDO.
+
+* This is needed to create the connection to the database 
+
+## Making Queries
+
+As far as making queries there are 2 ways to handle this 
+    1. *Query method
+        This method is fine if we are not using any kind of 
+        variables or any kind of user input 
+
+    2. *Prepared statement
+        this is for if we are using user input from forms and 
+        we need to insert that input 
+
+## PDOquery
+
+so we are going to make a variable stmt
+for statement and take the pdo instance and call the Query
+method 
+
+inside of this method we are going to write a simple Query
+the stmt variable is now storing those result 
+
+now we are going to want to loop through the results and then print them to the screen
+we are going to use a while loop for this 
+
+so in the condition statement we are going to
+create another variable called rows and then 
+store the result of (stmt->fetch()) 
+
+## fetch
+with this fetch method we basically tell object how
+we want it formatted 
+we have some options to choose from 
+    - associative array (this is what we are going to do)
+    - object (FETCH_OBJ)
+    - regular array 
+    - key value pairs 
+
+associative arrays and objects are the most common 
+
+## setAttribute 
+now if we dont always want to specify which 
+format we want to use we can always take this approach 
+
+so lets say we wanted to set the default format to object
+well right after we create the PDO instance we can 
