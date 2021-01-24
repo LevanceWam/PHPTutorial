@@ -1,0 +1,96 @@
+# PDO Course 
+
+Here we are going to take a look at
+PDO (php data objects).
+
+PDO can be a very complicated topic this is because 
+there is a lot to it so we are going to go over the 
+basics in this course.
+
+## What is PDO?
+
+- PHP Data Objects (PHP Extension)
+
+- lean and consisent way to accessa database.
+    It can be used in place of MySQLi
+    which is MySQL Improved and this is one of the main ways to 
+    connect to and work with a MySQL database
+
+- Works with multiple databases
+    Unlike MySQLi PDO works with multiple 
+    database systems so we can use it with MySQL
+    PostgreSQL, Firebird, MircosoftSQL and etc
+
+- Data access layer
+    PDO provides this layer this means that no matter what database 
+    we are using no matter what type of system we use the same functions
+    to execute queries and fetch data.
+
+    PDO does not provide a database abstraction it 
+    doesn't rewrite  sql-like full-blown abstraction
+    layers like something PRDB its an actual data access layer
+
+- Object-oriented
+    it is completely Object-oriented with methods and properties 
+    PDO ships with PHP current version
+
+## Benefits of PDO
+
+- Supports multiple databases 
+    It does notsupport syntax that's just specific to 
+    a certian databases in some cases we can switch out the 
+    connection string to change the database 
+    we are working with. so something like 
+    MySQL to postgrads is a thing.
+
+    Now many SQL dbs do have different styles of 
+    and flavors of SQL so we have to keep this in mind
+
+- Security/Prepared Statements
+    This is one of the biggest benefits if PDO it uses
+    Prepared statements which help prevents our database from 
+    SQL Injections 
+
+    *SQL injections are where someone inserts SQL statements and instructions
+    through user input on a form from our website 
+    this can completely destroy our database
+
+    *Prepared statement is a pre-complied SQL statement that seperates 
+    the instruction of the SQL statement from the data
+    with Prepared statements the data that comes in from the user is 
+    treated as just data there no way it can be interputed as in SQL instruction
+    which can happen when data is passed into your SQL
+
+    SQLI also provides prepared statements but PDO does this better with named parameters and so on 
+
+- Usability
+    PDO is very usable it has a ton of helper functions 
+    that can automate routine operations 
+
+- Reusability
+    it is reusable in a sense that it has a unified API to 
+    access multiple databases.
+
+- Excellent Error Handling 
+    PDO gives us excellent error handling options 
+    and functionality using expections 
+    theres 3 different ways to handle this 
+        - silent 
+        - warning 
+        - expection
+
+
+## Main PDO Classes 
+    - PDO: Represents a connection between PHP & DB.
+        This is where we plug in the DSN 
+
+    - PDOStatement: Represents a prepared statement 
+    and after it's executed an associated result. 
+
+    - PDOException: Represents errors raised by PDO
+        There are many different options and ways to handle expections 
+
+## Supported Databases 
+Look at the screenshot 'supported' to see them 
+
+Please refer to Notes2 to start heading into coding.
