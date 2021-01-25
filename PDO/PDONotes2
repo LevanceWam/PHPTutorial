@@ -59,4 +59,61 @@ now if we dont always want to specify which
 format we want to use we can always take this approach 
 
 so lets say we wanted to set the default format to object
-well right after we create the PDO instance we can 
+well right after we create the PDO instance we can add a 
+attribute to this object 
+
+*Overriding 
+we can Override the default by passing the format we want anyway by
+passing the FETCH_ASSOC parameter in fetch()
+
+## Prepared Statements
+
+with prepared statements we have 2 main methods
+    1. Prepare
+    2. Execute
+
+first we are going to look at the unsafe way of doing things
+// UNSAFE 
+// this is where the input from the form would go
+// but this is giving the Opportunity to actually insert SQL instructions 
+// right into the query
+$sql = "SELECT * FROM demo WHERE author = '$author'";
+
+this is where prepared statements are good for it seperates the 
+instructions from the actual data
+
+## Fetching multiple post
+
+when we are using prepared statements we have the 2 ways to do it
+we can use:
+    1. positional parameters
+    2. name paramaters
+
+### positional paramaters
+so we are going to write our query 
+where the user input/variable is going to be set we are going to place a placeholder our ?
+
+now we need to prepare the statement so in a variable we are going to store this statement 
+
+now we need to execute it 
+so we are going to use the execute method on stmt
+inside of this method we are going to put an array as the argument 
+
+then we are going to pass the variable that we want to search by 
+this variable is going to be what fills the place holder 
+
+*important
+with positional parmeters the order is very important 
+the order is very sensitive we have to make sure the 
+agruments we are providing in the array are in the correct order 
+
+now we are going to create another variable to hold the stmt
+since we have more than one result we are going to fetchAll to get all of the records
+
+now we are going to var dump so we can see what exactly is in this post object 
+now we can see that it is going to have all of the post in the object 
+
+    *when ever we see stdClass it relates to a object 
+
+now we can loop through this object using a for each 
+this returns all of the post that have the author brad
