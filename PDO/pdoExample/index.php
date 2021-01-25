@@ -9,7 +9,7 @@ $pdo->setAttribute(
     PDO::FETCH_OBJ
 );
 
-// PDO query
+// ##PDO query
 
 // we are storing the results in this variable 
 // $stmt = $pdo->query('SELECT * FROM demo');
@@ -37,7 +37,7 @@ $pdo->setAttribute(
 
 //  -------------------------------------------------------
 
-// PDO Prepared Statement
+// ##PDO Prepared Statement
 
 // UNSAFE 
 // this is where the input from the form would go
@@ -49,28 +49,78 @@ $pdo->setAttribute(
 
 // user input 
 $author = 'brad';
+$is_pub = true;
+$id = 1;
+
 
 // positional statement 
 // the question mark is a positional parameter 
 // this is a placeholder for where the variable holding the input goes
-$sql = "SELECT * FROM demo WHERE author = ?";
+// $sql = "SELECT * FROM demo WHERE author = ?";
 
-// this is going to prepare our statement
-$stmt = $pdo->prepare($sql);
+// // this is going to prepare our statement
+// $stmt = $pdo->prepare($sql);
 
-// we need to pass an array and inside of this array we need to
-// pass the variable we want to execute
-// so the placeholder is going to be filled with this as the value 
+// // we need to pass an array and inside of this array we need to
+// // pass the variable we want to execute
+// // so the placeholder is going to be filled with this as the value 
+// $stmt->execute([$author]);
+
+// // this is going to get all of the results  
+// // inside of the fetch all we can format this how we want to but we already have the default set
+// $post = $stmt->fetchAll();
+
+// // this is going to show us what is in this post object 
+// // var_dump($post);
+
+// // looping through the post 
+// foreach ($post as $post) {
+//     echo $post->title . '<br>';
+// }
+
+
+//  -------------------------------------------------------
+
+// ##PDO Named Parameter 
+
+// this is the syntax for named param 
+// so instead of the '?' we use a : and the name of the param we want to use 
+// $sql = 'SELECT * FROM posts WHERE author = :author';
+// $stmt = $pdo->prepare($sql);
+// // instead of having a regular array we have to have a Assoc one 
+// $stmt->execute(['author' => $author]);
+// $post = $stmt->fetchAll();
+
+// foreach ($post as $post) {
+//     echo $post->title . '<br>';
+// }
+
+// ## multiple values 
+
+// $sql = 'SELECT * FROM posts WHERE author = :author && is_pub = :is_pub';
+// $stmt = $pdo->prepare($sql);
+// // passing 2 varibales into the query
+// $stmt->execute(['author' => $author, 'is_pub' => $is_pub]);
+// $post = $stmt->fetchAll();
+
+// foreach ($post as $post) {
+//     echo $post->title . '<br>';
+// }
+
+// ## Fetch single post
+
+// $sql = 'SELECT * FROM posts WHERE id = :id';
+// $stmt = $pdo->prepare($sql);
+// $stmt->execute(['id' => $id]);
+// // just using fetch  because we are only getting one record 
+// $post = $stmt->fetch();
+
+// echo $post->title;
+
+// ## Get Row Count 
+$stmt = $pdo->prepare('SELECT * FROM posts WHERE author = ?');
 $stmt->execute([$author]);
+// returning the number of rows
+$postCount = $stmt->rowCount();
 
-// this is going to get all of the results  
-// inside of the fetch all we can format this how we want to but we already have the default set
-$post = $stmt->fetchAll();
-
-// this is going to show us what is in this post object 
-// var_dump($post);
-
-// looping through the post 
-foreach ($post as $post) {
-    echo $post->title . '<br>';
-}
+echo $postCount;

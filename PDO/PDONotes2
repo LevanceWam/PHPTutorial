@@ -117,3 +117,32 @@ now we can see that it is going to have all of the post in the object
 
 now we can loop through this object using a for each 
 this returns all of the post that have the author brad
+
+## Named parameters
+Now we are going to do the same thing but with named parameters
+this is very similiar to positional parameters
+
+with named params instead of using '?' we can use a 
+:namedParameter
+
+now in the execute we have to pass the value in a associative array instead of a regular one 
+
+** now if we wanted to do multiple variables 
+first we need to update the query conditional to include another variable 
+next in the associative array just add another value like we did before 
+
+## Fetch single post 
+This is nothing different than what we have been doing earlier 
+the only thing that changed was the query, the amount of variables we are passing to the associative array
+and instead of using fetchAll() we are going to use fetch because we are grtting 
+one record back
+
+## Get row count 
+
+this one is a little simpler
+first we need to write the statement 
+then we need to execute it 
+finally we call the rowCount method and
+then echo the results and thats it 
+
+## Inserting data
