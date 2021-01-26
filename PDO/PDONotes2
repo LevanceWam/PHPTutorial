@@ -146,3 +146,14 @@ finally we call the rowCount method and
 then echo the results and thats it 
 
 ## Inserting data
+
+so we are going to pretend that this stuff is coming 
+from a form 
+
+so we are going to want to use prepared statements to insert 
+
+## Delete data
+follows the structure of the others 
+
+## Searching for data using LIKE 
+again nothing to far from what we have to be 

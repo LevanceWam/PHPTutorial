@@ -95,6 +95,8 @@ $id = 1;
 //     echo $post->title . '<br>';
 // }
 
+//  -------------------------------------------------------
+
 // ## multiple values 
 
 // $sql = 'SELECT * FROM posts WHERE author = :author && is_pub = :is_pub';
@@ -107,6 +109,8 @@ $id = 1;
 //     echo $post->title . '<br>';
 // }
 
+//  -------------------------------------------------------
+
 // ## Fetch single post
 
 // $sql = 'SELECT * FROM posts WHERE id = :id';
@@ -117,10 +121,56 @@ $id = 1;
 
 // echo $post->title;
 
-// ## Get Row Count 
-$stmt = $pdo->prepare('SELECT * FROM posts WHERE author = ?');
-$stmt->execute([$author]);
-// returning the number of rows
-$postCount = $stmt->rowCount();
+//  -------------------------------------------------------
 
-echo $postCount;
+
+// ## Get Row Count 
+// $stmt = $pdo->prepare('SELECT * FROM posts WHERE author = ?');
+// $stmt->execute([$author]);
+// // returning the number of rows
+// $postCount = $stmt->rowCount();
+
+// echo $postCount;
+
+//  -------------------------------------------------------
+
+// ##Insert Data
+// $title = 'post five';
+// $body = 'this is post five';
+// $author = 'kevin';
+
+// $sql = 'INSERT INTO post(title, body, author) VALUES(:title, :body, :author)';
+// $stmt = $pdo->prepare($sql);
+// // once we execute this the these values are inserted 
+// $stmt->execute(['title' => $title, 'body' => $body, 'author' => $author]);
+// echo 'Post Added';
+
+//  ## Update data
+// $id = 1;
+// $body = 'this is the updated post';
+
+// $sql = 'UPDATE post SET body = :body WHERE id = :id ';
+// $stmt = $pdo->prepare($sql);
+// // once we execute this the these values are inserted 
+// $stmt->execute(['body' => $body, 'id'=> $id]);
+// echo 'Post updated';
+
+//  ## Delete data
+// $id = 3;
+
+// $sql = 'DELETE FROM posts WHERE id = :id';
+// $stmt = $pdo->prepare($sql);
+// // once we execute this the these values are inserted 
+// $stmt->execute(['id' => $id]);
+// echo 'Post updated';
+
+// SEARCH DATA
+$search = "%f%";
+$sql = 'SELECT * FROM posts where title LIKE ? ';
+$stmt = $pdo->prepare($sql);
+$stmt->execute($search);
+$posts = $stmt->fetchAll();
+
+foreach ($post as $post) {
+    echo $post->title . "<br>";
+}
